@@ -1,0 +1,6 @@
+     1                                  ; A simple boot sector program that loops forever
+     2                                  loop:
+     3 00000000 EBFE                        jmp loop
+     4                                  
+     5 00000002 00<rept>                times 510-($-$$) db 0
+     6 000001FE 55AA                    dw 0xaa55
